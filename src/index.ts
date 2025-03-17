@@ -1,12 +1,9 @@
-import express from 'express';
+import { createApp } from './createApp';
 import dotenv from 'dotenv';
-import usersRouter from './routes/users';
 
 dotenv.config();
 
-const app = express();
-
-app.use('/api/users', usersRouter);
+const app = createApp();
 
 const PORT =  process.env.PORT || 8000;
 
