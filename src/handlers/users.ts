@@ -4,7 +4,8 @@ import { CreateUserQueryParams } from "../types/query-params";
 import { User } from "../types/response";
 
 export function getUsers(req: Request, res: Response) {
-  res.send({});
+
+  res.send([]);
 }
 
 export function getUserById(req: Request, res: Response) {
@@ -12,7 +13,7 @@ export function getUserById(req: Request, res: Response) {
 }
 
 export function createUser(req: Request<{}, {}, CreateUserDto, CreateUserQueryParams>, res: Response<User>) { 
-  
+
 
   res.status(201).send({
     id: 1,
