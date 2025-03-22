@@ -1,5 +1,10 @@
-export interface User {
-  id: number;
-  email: string;
-  username: string;
+import { User } from '@prisma/client';
+
+export interface NewUserResponse {
+  message: String;
+  createdUser: User;
+}
+
+export interface ErrorResponse {
+  error: String;
 }
